@@ -74,20 +74,27 @@ aidButton.addEventListener('click', function () {
 })
 
 // history tab functionality
+
 const historyTab = document.getElementById('history-button');
 const donationTab = document.getElementById('donation-button');
-historyTab.addEventListener('click', function () {
-
+ 
+  historyTab.addEventListener('click', function () {
   historyTab.classList.add('bg-[#B4F461]');
   donationTab.classList.remove('bg-[#B4F461]');
 
   document.getElementById('diplay-page').classList.add('hidden');
+  document.getElementById('history-show').classList.remove('hidden');
 
 
 })
+  
+ donationTab.addEventListener('click', function(){
+  donationTab.classList.add('bg-[#B4F461]')
+  historyTab.classList.remove('bg-[#B4F461]');
 
-
-
+  document.getElementById('history-show').classList.add('hidden');
+  document.getElementById('diplay-page').classList.remove('hidden')
+ })
 
 
 
