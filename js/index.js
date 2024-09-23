@@ -24,7 +24,11 @@ donateButton.addEventListener('click', function () {
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalance;
 
-
+  count += 1
+  if (isNaN(inputTab) || inputTab <= 0) {
+    document.getElementById('donate-error').classList.remove('hidden');
+    return;
+}
 
 })
 
@@ -49,6 +53,16 @@ donateButtonFeni.addEventListener('click', function () {
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalanceTwo;
 
+//   document.getElementById('donate-btn-feni').addEventListener('click', function(){
+//     const secondInput = parseFloat(document.getElementById('second-input').value);
+
+//   count += 1
+//   if (isNaN(secondInput) || secondInput <= 0) {
+//     document.getElementById('donate-error-two').classList.remove('hidden');
+//     return;
+// }
+
+
 })
 
 // [card - 3]
@@ -70,6 +84,13 @@ aidButton.addEventListener('click', function () {
   const ramainBalanceThree = mainBalance - sumThree;
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalanceThree;
+
+  count += 1
+  if (isNaN(inputTab) || inputTab <= 0) {
+    document.getElementById('donate-error').classList.remove('hidden');
+    return;
+}
+
 
 })
 
@@ -96,15 +117,36 @@ const donationTab = document.getElementById('donation-button');
   document.getElementById('diplay-page').classList.remove('hidden')
  })
 
+ const donateNoakhali = document.getElementById('first-input').value; // Example donation amount
+
+ document.getElementById('history-button').addEventListener('click', function(){
+     const historyItem = document.createElement("div");
+     historyItem.className = "bg-white mx-24 my-5 p-3 rounded-md border border-gray-300"; // Adjusted border class
+ 
+     // Create content for the history item
+     const donateNoakhali = parseFloat(document.getElementById('donate-amount-noakhali').innerText);
+  
+    
+
+     historyItem.innerHTML = `
+         <p class="text-xs text-gray-500">${donateNoakhali} taka is ${}</p>
+         <p class="text-xs text-gray-500">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} +0600 (Bangladesh Standard Time)</p>
+     `;
+ 
+     // Get the history container and insert the new history item
+     const historyContainer = document.getElementById('history-show');
+     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+     
+ });
+ 
+
+//  
+
+document.getElementById('donate-button').addEventListener('click', function(){
+  const inputTab = parseFloat(document.getElementById('first-input').value);
+
+})
 
 
-
-// const historyItem = document.createElement("div");
-// historyItem.className =
-//   "bg-white p-3 rounded-md border-1-2 border-indigo-500";
-// historyItem.innerHTML = `
-//       <p class="text-xs text-gray-500 ">${donateNoakhali} taka ${}</p>
-//       <p class="text-xs text-gray-500 ">Date: ${new Date().toLocaleDateString()} ${setTimeout().toLocaleString}</p>
-// `;
-//       const historyContainer = document.getElementById('history-show');
-//       historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+      historyContainer.insertBefore(historyItem, historyContainer.firstChild);
