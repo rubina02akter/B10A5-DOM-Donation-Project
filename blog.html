@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8a73c5eb80.js" crossorigin="anonymous"></script>
+    <!-- Google fon CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind css CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font {
+        font-family: "Lexend", sans-serif;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="mx-24">
+      <div class="flex justify-start items-center">
+        <h1 class="font-bold text-3xl m-5">Important FAQ</h1>
+        <i class="fa-regular fa-circle-question"></i>
+      </div> 
+    
+
+
+
+
+    <div class="collapse collapse-arrow border">
+      <input type="radio" name="" id="" />
+      <div class="collapse-title text-xl font-medium">
+        What is the Document Object Model (DOM)?
+      </div>
+      <div class="collapse-content">
+        <p>
+          The Document Object Model (DOM) is a programming interface that
+          represents the structure of a document, such as an HTML or XML file,
+          as a tree of objects. Each node in this tree corresponds to different
+          parts of the document, including elements, attributes, and text,
+          allowing developers to easily navigate and manipulate the content and
+          structure of a webpage. Through the DOM, developers can create dynamic
+          and interactive user experiences by responding to events, modifying
+          content in real-time, and changing the appearance of elements. While
+          the DOM is designed to be language-agnostic, it is most commonly
+          manipulated using JavaScript in web development, providing a powerful
+          way to enhance the functionality and interactivity of web
+          applications.
+        </p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border">
+      <input type="radio" name="" id="" />
+      <div class="collapse-title text-xl font-medium">
+        How do you select an element from the DOM?
+      </div>
+      <div class="collapse-content">
+        <p>
+          To select an element from the DOM, you can use various methods
+          provided by the JavaScript API. One of the most common methods is
+          `document.getElementById()`, which allows you to retrieve an element
+          based on its unique ID. Another widely used method is
+          `document.querySelector()`, which enables you to select the first
+          element that matches a specified CSS selector, making it versatile for
+          selecting elements by class, tag, or other attributes. If you want to
+          select multiple elements, you can use `document.querySelectorAll()`,
+          which returns a NodeList of all elements that match the given
+          selector. Additionally, you can traverse the DOM tree using properties
+          like `parentNode`, `childNodes`, and `nextSibling` to access related
+          elements. These methods provide a robust way to interact with and
+          manipulate the elements of a webpage as needed.
+        </p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border">
+      <input type="radio" name="" id="" />
+      <div class="collapse-title text-xl font-medium">
+        What is event delegation in the context of the DOM, and why is it
+        useful?
+      </div>
+      <div class="collapse-content">
+        <p>
+          Event delegation is a technique in the context of the DOM that allows
+          a single event listener to manage events for multiple child elements
+          rather than attaching individual listeners to each element. This is
+          achieved by setting the event listener on a common ancestor element
+          and utilizing the event bubbling phase to capture events that
+          originate from its child elements. This approach is useful for several
+          reasons: it reduces memory consumption by minimizing the number of
+          event listeners needed, enhances performance, especially in scenarios
+          with a large number of child elements, and simplifies the management
+          of dynamic content since new child elements automatically inherit the
+          event listener without requiring additional setup. By leveraging event
+          delegation, developers can create more efficient and maintainable code
+          while also ensuring consistent behavior across a range of user
+          interactions.
+        </p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border">
+      <input type="radio" name="" id="" />
+      <div class="collapse-title text-xl font-medium">
+        How do you manipulate an element's attributes and styles using the DOM?
+      </div>
+      <div class="collapse-content">
+        <p>
+          To manipulate an element's attributes and styles using the DOM, you
+          can utilize various properties and methods provided by the JavaScript
+          API. To change an element's attributes, you can use the
+          `setAttribute()` method, which allows you to specify the attribute
+          name and its new value, or directly access properties on the element,
+          such as `element.id` or `element.className`. For example, if you want
+          to modify the `src` attribute of an image, you can do so with
+          `element.setAttribute('src', 'newImage.jpg')`. To adjust an element's
+          styles, you can manipulate the `style` property, allowing you to set
+          CSS styles directly in JavaScript. For instance, you can change the
+          background color of an element with `element.style.backgroundColor =
+          'blue'`. This combination of methods and properties enables developers
+          to create dynamic and responsive interfaces by updating attributes and
+          styles based on user interactions or application logic.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
