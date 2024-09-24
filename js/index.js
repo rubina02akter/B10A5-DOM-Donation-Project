@@ -1,5 +1,32 @@
 //  common function [].................
 
+// function getValueById(id) {
+//   return parseFloat(document.getElementById(id).value);
+// }
+
+
+// const donateButton = document.getElementById('donate-button');
+// donateButton.addEventListener('click', function () {
+//   const firstDonate = getValueById('first-input');
+//   const donateNoakhali = parseFloat(document.getElementById('donate-amount-noakhali').innerText);
+//   const mainBalance = parseFloat(document.getElementById('balance').innerText);
+
+
+//   // donation amount calculation 
+
+//   const sum = firstDonate + donateNoakhali;
+//   const donation = document.getElementById('donate-amount-noakhali')
+//   donation.innerText = sum;
+
+//   //  Main balance show
+
+//   const ramainBalance = mainBalance - sum;
+//   const ramaining = document.getElementById('balance')
+//   ramaining.innerText = ramainBalance;
+
+ 
+// })
+
 function getValueById(id) {
   return parseFloat(document.getElementById(id).value);
 }
@@ -10,21 +37,19 @@ donateButton.addEventListener('click', function () {
   const donateNoakhali = parseFloat(document.getElementById('donate-amount-noakhali').innerText);
   const mainBalance = parseFloat(document.getElementById('balance').innerText);
 
-
   // donation amount calculation 
-
   const sum = firstDonate + donateNoakhali;
   const donation = document.getElementById('donate-amount-noakhali')
   donation.innerText = sum;
 
-  //  Main balance show
+  // Main balance show
+  const remainBalance = mainBalance - sum;
+  const remaining = document.getElementById('balance');
+  remaining.innerText = remainBalance;
 
-  const ramainBalance = mainBalance - sum;
-  const ramaining = document.getElementById('balance')
-  ramaining.innerText = ramainBalance;
-
-
-})
+  // Reset the input field
+  document.getElementById('first-input').value = '';
+});
 
 
 // [card - 2]
@@ -47,9 +72,10 @@ donateButtonFeni.addEventListener('click', function () {
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalanceTwo;
 
+  // Reset the input field
+  document.getElementById('second-input').value = '';
 
-
-})
+});
 
 // [card - 3]
 
@@ -72,7 +98,10 @@ aidButton.addEventListener('click', function () {
   ramaining.innerText = ramainBalanceThree;
 
 
-})
+  // Reset the input field
+  document.getElementById('third-input').value = '';
+
+});
 
 // history tab functionality
 
