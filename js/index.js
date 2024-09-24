@@ -24,11 +24,11 @@ donateButton.addEventListener('click', function () {
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalance;
 
-  count += 1
-  if (isNaN(inputTab) || inputTab <= 0) {
-    document.getElementById('donate-error').classList.remove('hidden');
-    return;
-}
+//   count += 1
+//   if (isNaN(inputTab) || inputTab <= 0) {
+//     document.getElementById('donate-error').classList.remove('hidden');
+//     return;
+// }
 
 })
 
@@ -85,11 +85,11 @@ aidButton.addEventListener('click', function () {
   const ramaining = document.getElementById('balance')
   ramaining.innerText = ramainBalanceThree;
 
-  count += 1
-  if (isNaN(inputTab) || inputTab <= 0) {
-    document.getElementById('donate-error').classList.remove('hidden');
-    return;
-}
+//   count += 1
+//   if (isNaN(inputTab) || inputTab <= 0) {
+//     document.getElementById('donate-error').classList.remove('hidden');
+//     return;
+// }
 
 
 })
@@ -128,14 +128,14 @@ const donationTab = document.getElementById('donation-button');
   
     
 
-     historyItem.innerHTML = `
-         <p class="text-xs text-gray-500">${donateNoakhali} taka is ${}</p>
-         <p class="text-xs text-gray-500">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} +0600 (Bangladesh Standard Time)</p>
-     `;
+    //  historyItem.innerHTML = `
+    //      <p class="text-xs text-gray-500">${donateNoakhali} taka is ${}</p>
+    //      <p class="text-xs text-gray-500">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} +0600 (Bangladesh Standard Time)</p>
+    //  `;
  
-     // Get the history container and insert the new history item
-     const historyContainer = document.getElementById('history-show');
-     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    //  // Get the history container and insert the new history item
+    //  const historyContainer = document.getElementById('history-show');
+    //  historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
      
  });
@@ -143,10 +143,10 @@ const donationTab = document.getElementById('donation-button');
 
 //  
 
-document.getElementById('donate-button').addEventListener('click', function(){
-  const inputTab = parseFloat(document.getElementById('first-input').value);
+// document.getElementById('donate-button').addEventListener('click', function(){
+//   const inputTab = parseFloat(document.getElementById('first-input').value);
 
-})
+// })
 
 
-      historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+//       historyContainer.insertBefore(historyItem, historyContainer.firstChild);
