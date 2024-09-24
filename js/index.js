@@ -40,6 +40,7 @@ function getValueById(id) {
   div.innerHTML = `
     <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka is Donated for Flood Relief in Noakhali, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
   `;
+
   const historyContainer = document.getElementById("history-show");
   historyContainer.appendChild(div);
 });
@@ -81,9 +82,9 @@ function getValueById(id) {
 
    const div = document.createElement("div");
    div.innerHTML = `
-     <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka is Donated for Flood Relief in Feni, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
+     <p class="text-xl py-3 border  text-gray-500">${secondDonate} Taka is Donated for Flood Relief in Feni, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
    `;
-   const historyContainer = document.getElementById("history-show-two");
+   const historyContainer = document.getElementById("history-show");
    historyContainer.appendChild(div);
 
 });
@@ -122,9 +123,9 @@ aidButton.addEventListener('click', function () {
 
   const div = document.createElement("div");
   div.innerHTML = `
-    <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka isAid for Injured in the Quota Movement, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
+    <p class="text-xl py-3 border  text-gray-500">${thirdDonate} Taka isAid for Injured in the Quota Movement, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
   `;
-  const historyContainer = document.getElementById("history-show-three");
+  const historyContainer = document.getElementById("history-show");
   historyContainer.appendChild(div);
 });
 
