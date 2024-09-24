@@ -12,34 +12,76 @@ donateButton.addEventListener("click", function () {
   );
   const mainBalance = parseFloat(document.getElementById("balance").innerText);
 
+  if (firstDonate <= 0 || firstDonate > mainBalance || isNaN(firstDonate)) {
+    let donationInput = document.getElementById("first-input");
+    donationInput.value = "";
+    alert("Invalid Input");
+    return;
+  }
+
   const sum = firstDonate + donateNoakhali;
   const donation = document.getElementById("donate-amount-noakhali");
   donation.innerText = sum;
 
-  const remainBalance = mainBalance - sum;
+  const remainBalance = mainBalance - firstDonate;
   const remaining = document.getElementById("balance");
   remaining.innerText = remainBalance;
 
   document.getElementById("first-input").value = "";
 
-
-
-  if ( Math.sign(firstDonate) === -1 || firstDonate <= 0 || firstDonate > mainBalance || isNaN(firstDonate)) {
-    let donationInput = document.getElementById("first-input");
-    donationInput.value = "";
-    alert("Invalid Input");
-    return;
-  } 
-  else {
-    my_modal_1.showModal();
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka is Donated for Flood Relief in Noakhali, Bangladesh </br>${new Date().toLocaleDateString()}</p>
-    `;
-    const historyContainer = document.getElementById("history-show");
-    historyContainer.appendChild(div);
-  }
+  my_modal_1.showModal();
+  const div = document.createElement("div");
+  div.innerHTML = `
+    <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka is Donated for Flood Relief in Noakhali, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
+  `;
+  const historyContainer = document.getElementById("history-show");
+  historyContainer.appendChild(div);
 });
+
+
+
+
+
+// function getValueById(id) {
+//   return parseFloat(document.getElementById(id).value);
+// }
+
+// const donateButton = document.getElementById("donate-button");
+// donateButton.addEventListener("click", function () {
+//   const firstDonate = getValueById("first-input");
+//   const donateNoakhali = parseFloat(
+//     document.getElementById("donate-amount-noakhali").innerText
+//   );
+//   const mainBalance = parseFloat(document.getElementById("balance").innerText);
+
+//   const sum = firstDonate + donateNoakhali;
+//   const donation = document.getElementById("donate-amount-noakhali");
+//   donation.innerText = sum;
+
+//   const remainBalance = mainBalance - sum;
+//   const remaining = document.getElementById("balance");
+//   remaining.innerText = remainBalance;
+
+//   document.getElementById("first-input").value = "";
+
+
+
+//   if ( Math.sign(firstDonate) === -1 || firstDonate <= 0 || firstDonate > mainBalance || isNaN(firstDonate)) {
+//     let donationInput = document.getElementById("first-input");
+//     donationInput.value = "";
+//     alert("Invalid Input");
+//     return;
+//   } 
+//   else {
+//     my_modal_1.showModal();
+//     const div = document.createElement("div");
+//     div.innerHTML = `
+//       <p class="text-xl py-3 border  text-gray-500">${firstDonate} Taka is Donated for Flood Relief in Noakhali, Bangladesh </br>${new Date().toLocaleDateString()}</p>
+//     `;
+//     const historyContainer = document.getElementById("history-show");
+//     historyContainer.appendChild(div);
+//   }
+// });
 // /
 
 // function getValueById(id) {
