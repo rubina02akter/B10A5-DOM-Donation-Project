@@ -25,11 +25,11 @@ function getValueById(id) {
 
   const sum = firstDonate + donateNoakhali;
   const donation = document.getElementById("donate-amount-noakhali");
-  donation.innerText = sum;
+  donation.innerText = sum.toFixed(2);
 
   const remainBalance = mainBalance - firstDonate;
   const remaining = document.getElementById("balance");
-  remaining.innerText = remainBalance;
+  remaining.innerText = remainBalance.toFixed(2);
 
   document.getElementById("first-input").value = "";
 
@@ -67,13 +67,13 @@ function getValueById(id) {
 
   const sumTwo = secondDonate + donateFeni;
   const donation = document.getElementById('donate-ammount-feni')
-  donation.innerText = sumTwo;
+  donation.innerText = sumTwo.toFixed(2);
 
   //  Main balance show
 
   const ramainBalanceTwo = mainBalance - secondDonate;
   const ramaining = document.getElementById('balance');
-  ramaining.innerText = ramainBalanceTwo;
+  ramaining.innerText = ramainBalanceTwo.toFixed(2);
 
   // Reset the input field
   document.getElementById('second-input').value = '';
@@ -84,7 +84,7 @@ function getValueById(id) {
 
    const div = document.createElement("div");
    div.innerHTML = `
-     <p class="text-xl py-3 border px-4 rounded-lg  text-gray-500">${secondDonate} Taka is Donated for Flood Relief in Feni, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
+     <p class="text-xl py-3 border px-4 rounded-lg  text-gray-500">${secondDonate.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
    `;
    const historyContainer = document.getElementById("history-show");
    historyContainer.appendChild(div);
@@ -110,11 +110,11 @@ aidButton.addEventListener('click', function () {
 }
  const sumThree = thirdDonate + donateForAid;
   const donation = document.getElementById('aid-amount')
-  donation.innerText = sumThree;
+  donation.innerText = sumThree.toFixed(2);
 
   const ramainBalanceThree = mainBalance - thirdDonate;
   const remaining = document.getElementById("balance");
-  remaining.innerText = ramainBalanceThree;
+  remaining.innerText = ramainBalanceThree.toFixed(2);
 
   document.getElementById("third-input").value = "";
 
@@ -125,7 +125,7 @@ aidButton.addEventListener('click', function () {
 
   const div = document.createElement("div");
   div.innerHTML = `
-    <p class="text-xl py-3 border px-4 rounded-lg text-gray-500">${thirdDonate} Taka isAid for Injured in the Quota Movement, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
+    <p class="text-xl py-3 border px-4 rounded-lg text-gray-500">${thirdDonate.toFixed(2)} Taka isAid for Injured in the Quota Movement, Bangladesh </br>${new Date().toLocaleDateString()} time: ${new Date().toLocaleTimeString()}</p>
   `;
   const historyContainer = document.getElementById("history-show");
   historyContainer.appendChild(div);
@@ -154,4 +154,5 @@ donationTab.addEventListener('click', function () {
   document.getElementById('history-show').classList.add('hidden');
   document.getElementById('diplay-page').classList.remove('hidden')
 })
+
 
